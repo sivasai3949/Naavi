@@ -1,11 +1,8 @@
 import streamlit as st
 import openai
-from dotenv import load_dotenv
-import os
 
-# Load environment variables from .env file
-load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
+# Load API key from Streamlit Secrets
+openai.api_key = st.secrets["openai_api_key"]
 
 # Initial questions
 questions = [
@@ -68,4 +65,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
