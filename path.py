@@ -59,6 +59,7 @@ def main():
                 st.write("Choose an option:")
                 for option in options:
                     st.write(option)
+        st.button("Clear")  # Add a clear button
     else:
         user_input = st.text_input("User Input")
         if st.button("Send"):
@@ -68,4 +69,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
